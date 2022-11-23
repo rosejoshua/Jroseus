@@ -2,12 +2,16 @@
     <div class="row">
         <div class="col-md-10 px-4">
             <div class="row my-2">
-                <div class="col-md-8 text-center">
+                <div class="col-md-7 text-center">
                     <h2 class="pb-3">Photo Of The Day</h2>
-                    <img class="img-fluid" src="https://c.tadst.com/gfx/600x337/barcelona-morning-sky.jpg?1" alt=""/>
-                    <p class="mt-2 fst-italic">Photo caption here</p>
+                    <ng-container *ngIf="randomPhoto">
+                        <img class="img-fluid" src="{{ randomPhoto.data[0].sm_url }}" alt="{{ randomPhoto.data[0].alt }}">
+                        <p class="mt-2 fst-italic">{{ randomPhoto.data[0].caption }}</p>
+                    </ng-container>
+                    
+                    
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5 text-center">
                     <h2 class="pb-2">New Content</h2>
                     <div class="card bg-light mt-4 mx-1">
                         <div class="card-body">
@@ -36,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-2 px-4">
+        <div class="col-md-2 px-1">
             <div class="row my-2">
                 <h2 class="pb-2">Merch</h2>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non tellus orci ac auctor. Nisi quis eleifend quam adipiscing vitae proin. Lobortis feugiat vivamus at augue eget arcu dictum varius duis. Et netus et malesuada fames. Iaculis eu non diam phasellus vestibulum lorem sed. Mauris vitae ultricies leo integer malesuada nunc vel. Enim ut tellus elementum sagittis. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Non odio euismod lacinia at quis risus sed vulputate. Nunc sed velit dignissim sodales ut eu sem integer. Condimentum lacinia quis vel eros donec ac odio tempor orci. Placerat in egestas erat imperdiet. Lectus magna fringilla urna porttitor. Varius quam quisque id diam. Ut placerat orci nulla pellentesque dignissim enim sit. In ante metus dictum at tempor commodo ullamcorper a. In aliquam sem fringilla ut morbi tincidunt augue interdum. Auctor urna nunc id cursus metus. Dolor purus non enim praesent elementum.
